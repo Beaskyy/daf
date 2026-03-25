@@ -49,25 +49,25 @@
 }
 
 :root {
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.2 0 0);
+  --background: oklch(1 0 0); /* Pure White */
+  --foreground: oklch(0.2 0.02 250); /* Dark Navy/Slate for text */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0 0);
+  --card-foreground: oklch(0.2 0.02 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0 0);
-  --primary: oklch(0.35 0.25 300); /* Deep Purple */
-  --primary-foreground: oklch(0.98 0.05 100);
-  --secondary: oklch(0.85 0.25 80); /* Yellow Gold */
-  --secondary-foreground: oklch(0.2 0.05 300);
-  --muted: oklch(0.95 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.85 0.25 80);
-  --accent-foreground: oklch(0.2 0.05 300);
+  --popover-foreground: oklch(0.2 0.02 250);
+  --primary: oklch(0.4 0.25 300); /* Refined Logo Purple */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.85 0.2 90); /* Refined Logo Gold */
+  --secondary-foreground: oklch(0.2 0.02 250);
+  --muted: oklch(0.97 0.01 250); /* Very light gray/blue */
+  --muted-foreground: oklch(0.4 0.02 250);
+  --accent: oklch(0.85 0.2 90);
+  --accent-foreground: oklch(0.2 0.02 250);
   --destructive: oklch(0.6 0.2 25);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.4 0.2 300);
-  --radius: 0.75rem;
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.4 0.25 300);
+  --radius: 1rem; /* More rounded as seen in RNID */
 }
 
 

@@ -14,10 +14,12 @@ export default function Stories() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Stories from Students</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Voices from the communities we serve.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Stories from Students</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">Voices and reflections from the Deaf communities we serve, sharing the impact of our programmes.</p>
+        </div>
       </section>
 
       <Section>

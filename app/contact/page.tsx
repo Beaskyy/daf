@@ -5,11 +5,14 @@ import { Mail, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">We welcome enquiries from individuals, organisations, and partners.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Contact Us</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">We welcome enquiries from individuals, organisations, and partners. Get in touch with us to learn more or support our mission.</p>
+        </div>
       </section>
+...
 
       <Section>
         <div className="flex flex-col lg:flex-row gap-20">

@@ -30,10 +30,12 @@ export default function Programmes() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Programmes & Events</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Our core initiatives aimed at creating sustainable change.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Programmes & Events</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">Our core initiatives aimed at creating sustainable change and fostering opportunities for the Deaf community.</p>
+        </div>
       </section>
 
       {programmes.map((prog, i) => (

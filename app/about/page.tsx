@@ -7,11 +7,34 @@ import { Target, Eye, Heart, Quote } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <div className="pt-32">
       {/* Page Header */}
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">About Deaf Access Foundation</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Advancing access, awareness, and opportunities for Deaf communities in Nigeria.</p>
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+          >
+            Our Mission
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight"
+          >
+            About Deaf Access Foundation
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-muted-foreground leading-relaxed"
+          >
+            Advancing access, awareness, and opportunities for Deaf communities in Nigeria through education, advocacy, and innovation.
+          </motion.p>
+        </div>
       </section>
 
       <Section>

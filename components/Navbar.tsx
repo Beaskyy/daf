@@ -33,39 +33,38 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-2" : "bg-white border-b py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/DAF Logo.jpeg"
-            alt="DAF Logo"
-            width={40}
-            height={40}
-            className="rounded-full shadow-md"
-          />
-          <span className={`font-bold text-xl tracking-tight ${scrolled ? "text-primary" : "text-white"}`}>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
+            <Image
+              src="/logo.png"
+              alt="DAF Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <span className="font-bold text-xl tracking-tight text-primary">
             DAF
           </span>
         </Link>
-
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-secondary ${
-                scrolled ? "text-foreground" : "text-white"
-              }`}
+              className="text-sm font-semibold transition-colors hover:text-primary text-foreground/80 hover:text-primary"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="/partner"
-            className="bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform"
+            className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full font-bold hover:bg-primary/90 hover:shadow-lg transition-all"
           >
             Support Us
           </Link>
@@ -73,7 +72,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={`lg:hidden p-2 ${scrolled ? "text-primary" : "text-white"}`}
+          className="lg:hidden p-2 text-primary"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}

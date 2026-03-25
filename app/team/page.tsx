@@ -26,10 +26,12 @@ export default function Team() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Team</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Meet the individuals committed to expanding access and opportunities.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Meet Our Team</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">The dedicated individuals committed to expanding access and opportunities for the Deaf community in Nigeria.</p>
+        </div>
       </section>
 
       <Section>

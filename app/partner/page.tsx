@@ -23,10 +23,12 @@ export default function Partner() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Partner With Us</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Together we can expand access and opportunities.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Partner With Us</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">Together we can expand access, awareness, and opportunities for Deaf communities across Nigeria.</p>
+        </div>
       </section>
 
       <Section>
@@ -49,14 +51,14 @@ export default function Partner() {
         </div>
       </Section>
 
-      <Section className="bg-secondary rounded-[4rem] my-24">
-        <div className="flex flex-col md:flex-row items-center gap-16">
+      <Section className="bg-foreground text-background rounded-[4rem] my-24">
+        <div className="flex flex-col md:flex-row items-center gap-16 p-8 md:p-12 lg:p-20">
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter">Become a Partner</h2>
-            <p className="text-xl text-secondary-foreground leading-relaxed mb-10 opacity-80">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Become a Partner</h2>
+            <p className="text-xl text-background/80 leading-relaxed mb-12">
               We welcome partnerships with organisations interested in improving access and opportunities for Deaf communities in Nigeria. Educators, schools, and community partners are at the heart of what we do.
             </p>
-            <a href="mailto:deafaccessfoundation@gmail.com" className="bg-white text-primary font-bold px-10 py-4 rounded-full text-lg shadow-xl hover:scale-105 transition-transform inline-block">
+            <a href="mailto:deafaccessfoundation@gmail.com" className="bg-secondary text-secondary-foreground font-bold px-12 py-5 rounded-full text-lg shadow-xl hover:bg-secondary/90 transition-all inline-block">
               Get in Touch
             </a>
           </div>

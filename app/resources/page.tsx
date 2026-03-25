@@ -28,10 +28,12 @@ export default function Resources() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Resources</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Tools and insights for improving communication access.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Resources</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">Tools, insights, and guidance for improving communication access and supporting Deaf communities.</p>
+        </div>
       </section>
 
       <Section>
@@ -53,13 +55,14 @@ export default function Resources() {
         </div>
       </Section>
 
-      <Section className="bg-secondary rounded-[4rem] my-24">
-        <div className="text-center text-secondary-foreground max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Need specific guidance?</h2>
-          <p className="text-lg opacity-80 mb-10 leading-relaxed font-medium">
+      <Section className="bg-foreground text-background rounded-[4rem] my-24 shadow-2xl overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div className="text-center max-w-2xl mx-auto relative z-10 py-10 px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white tracking-tight">Need specific guidance?</h2>
+          <p className="text-lg text-background/80 mb-10 leading-relaxed">
             Our goal is to support everyone interested in improving communication access. Contact our team for bespoke resource support.
           </p>
-          <a href="mailto:deafaccessfoundation@gmail.com" className="bg-primary text-white font-bold px-10 py-4 rounded-full text-lg shadow-lg hover:scale-105 transition-transform inline-block">
+          <a href="mailto:deafaccessfoundation@gmail.com" className="bg-secondary text-secondary-foreground font-bold px-12 py-5 rounded-full text-lg shadow-xl hover:bg-secondary/90 transition-all inline-block">
             Request Resources
           </a>
         </div>

@@ -29,10 +29,12 @@ export default function Impact() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="bg-primary py-20 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Impact</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto px-6">Creating tangible change through focused initiatives.</p>
+    <div className="pt-32">
+      <section className="bg-background py-16 md:py-24 text-center border-b">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">Our Impact</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">Creating tangible change through focused initiatives and community-driven advocacy.</p>
+        </div>
       </section>
 
       <Section>
@@ -50,16 +52,16 @@ export default function Impact() {
         </div>
       </Section>
 
-      <Section className="bg-primary text-white rounded-[4rem] my-12 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-        <div className="relative z-10 max-w-3xl">
-          <h2 className="text-3xl font-bold mb-8">Highlight: IDPD at Ijokodo High School</h2>
-          <p className="text-xl leading-relaxed text-white/80 mb-10 italic">
+      <Section className="bg-foreground text-background rounded-[4rem] my-20 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="relative z-10 max-w-3xl py-10 px-4 md:px-12">
+          <h2 className="text-3xl font-bold mb-8 text-white">Highlight: IDPD at Ijokodo High School</h2>
+          <p className="text-xl leading-relaxed text-background/80 mb-10 italic">
             &quot;At Ijokodo High School in Ibadan, students participated in activities highlighting accessibility and inclusion, marking the International Day of Persons with Disabilities. This event served as a model for our national expansion.&quot;
           </p>
           <div className="flex gap-4">
             <span className="bg-secondary text-secondary-foreground font-bold px-6 py-2 rounded-full text-sm">Case Study</span>
-            <span className="bg-white/10 px-6 py-2 rounded-full text-sm">Ibadan, Nigeria</span>
+            <span className="bg-white/10 px-6 py-2 rounded-full text-sm text-white">Ibadan, Nigeria</span>
           </div>
         </div>
       </Section>
