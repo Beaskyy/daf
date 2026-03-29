@@ -35,8 +35,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
         {/* Logo - Large like RNID */}
-        <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:scale-105">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
+          <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform group-hover:scale-105">
             <Image
               src="/logo.png"
               alt="DAF Logo"
@@ -46,10 +46,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-black text-lg md:text-xl tracking-tight text-[#2D1B69]">
+            <span className="font-black text-base md:text-xl tracking-tight text-[#2D1B69] leading-none">
               Deaf Access Foundation
             </span>
-            <span className="text-[10px] md:text-xs text-muted-foreground font-medium leading-tight">
+            <span className="text-[9px] md:text-xs text-muted-foreground font-medium mt-0.5 leading-tight">
               Advancing opportunities for Deaf communities
             </span>
           </div>

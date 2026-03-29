@@ -82,7 +82,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-4 ${heroContent.textColor}`}>
+              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 ${heroContent.textColor}`}>
                 {heroContent.title}
               </h1>
               <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mb-8 leading-relaxed">
@@ -153,7 +153,7 @@ export default function Home() {
                           {item.icon}
                         </div>
                         <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                        <p className="text-white/60 text-sm leading-relaxed text-justify">{item.desc}</p>
+                        <p className="text-white/60 text-sm leading-relaxed text-left">{item.desc}</p>
                       </div>
                     </Link>
                   </div>
@@ -180,7 +180,7 @@ export default function Home() {
 
       {/* ═══════ WHERE WE WORK — Light Gold Section ═══════ */}
       <section className="bg-[#F5E6C8]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-28">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <motion.div
               className="lg:w-1/2"
@@ -204,15 +204,15 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="lg:w-1/2 grid grid-cols-2 gap-4"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image src="/impact.jpeg" alt="Students" fill className="object-cover" />
               </div>
-              <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl mt-8">
+              <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image src="/fd6271fc-00d0-4ece-a44c-6235bab53644.JPG" alt="Outreach" fill className="object-cover" />
               </div>
             </motion.div>
@@ -222,7 +222,7 @@ export default function Home() {
 
       {/* ═══════ STORIES CAROUSEL — Light Purple Section ═══════ */}
       <section className="bg-[#E8D5F5]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-28">
           <h2 className="text-3xl md:text-5xl font-black mb-12 text-[#2D1B69]">
             Stories from students
           </h2>
@@ -271,8 +271,8 @@ export default function Home() {
       </section>
 
       {/* ═══════ CTA — Full Width Dark Navy (like RNID) ═══════ */}
-      <section className="bg-[#2D1B69] text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <section className="bg-[#2D1B69] text-white py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <motion.div
               className="md:w-1/2"
@@ -303,12 +303,12 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="md:w-1/2"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              className="md:w-1/2 w-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="relative h-80 md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-72 md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/eventflyer.jpg"
                   alt="DAF Event"
