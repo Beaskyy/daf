@@ -7,14 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Programmes", href: "/programmes" },
   { name: "Impact", href: "/impact" },
   { name: "Stories", href: "/stories" },
-  { name: "Resources", href: "/resources" },
   { name: "Team", href: "/team" },
-  { name: "Partner", href: "/partner" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -33,12 +30,13 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-2" : "bg-white border-b py-4"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white border-b border-border/50 py-3"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        {/* Logo - Large like RNID */}
+        <Link href="/" className="flex items-center gap-3 group shrink-0">
+          <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:scale-105">
             <Image
               src="/logo.png"
               alt="DAF Logo"
@@ -47,32 +45,38 @@ export default function Navbar() {
               priority
             />
           </div>
-          <span className="font-bold text-xl tracking-tight text-primary">
-            DAF
-          </span>
+          <div className="flex flex-col">
+            <span className="font-black text-lg md:text-xl tracking-tight text-[#2D1B69]">
+              Deaf Access Foundation
+            </span>
+            <span className="text-[10px] md:text-xs text-muted-foreground font-medium leading-tight">
+              Advancing opportunities for Deaf communities
+            </span>
+          </div>
         </Link>
+
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-semibold transition-colors hover:text-primary text-foreground/80 hover:text-primary"
+              className="text-sm font-bold transition-colors text-foreground/70 hover:text-[#2D1B69]"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="/partner"
-            className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full font-bold hover:bg-primary/90 hover:shadow-lg transition-all"
+            className="bg-[#2D1B69] text-white px-7 py-3 rounded-lg font-bold text-sm hover:bg-[#2D1B69]/90 transition-all"
           >
-            Support Us
+            Donate
           </Link>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 text-primary"
+          className="lg:hidden p-2 text-[#2D1B69]"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -93,7 +97,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-lg font-bold text-foreground hover:text-[#2D1B69] transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -101,10 +105,10 @@ export default function Navbar() {
               ))}
               <Link
                 href="/partner"
-                className="bg-primary text-primary-foreground text-center py-3 rounded-lg font-bold"
+                className="bg-[#2D1B69] text-white text-center py-3 rounded-lg font-bold"
                 onClick={() => setIsOpen(false)}
               >
-                Partner With Us
+                Donate
               </Link>
             </div>
           </motion.div>
