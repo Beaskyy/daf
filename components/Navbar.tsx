@@ -49,9 +49,6 @@ export default function Navbar() {
             <span className="font-black text-base md:text-xl tracking-tight text-[#2D1B69] leading-none">
               Deaf Access Foundation
             </span>
-            <span className="text-[9px] md:text-xs text-muted-foreground font-medium mt-0.5 leading-tight">
-              Advancing opportunities for Deaf communities
-            </span>
           </div>
         </Link>
 

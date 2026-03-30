@@ -61,42 +61,68 @@ export default function Home() {
 
   return (
     <>
-      {/* ═══════ HERO SECTION (Static RNID‑style) ═══════ */}
-      <section className="relative pt-[72px] md:pt-[80px]">
-        {/* Hero Image */}
-        <div className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden">
-          <Image
-            src={heroContent.image}
-            alt={heroContent.title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        {/* Colored Block Overlay (exactly like RNID) */}
-        <div className={`${heroContent.color} transition-colors duration-500`}>
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-16">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+      {/* ═══════ HERO SECTION (Restored 2-Column Design) ═══════ */}
+      <section className="bg-[#FDF3E8] relative overflow-hidden pt-[72px] md:pt-[120px] pb-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+          {/* Left Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2D1B69] leading-tight">
+              Advancing{" "}
+              <span className="relative inline-block mt-2">
+                <span className="relative z-10">access</span>
+                <svg className="absolute -bottom-2 -left-2 w-[120%] h-[120%] -z-10 text-[#C4953A]" viewBox="0 0 100 40" preserveAspectRatio="none">
+                  <path d="M5,20 Q50,0 95,20 Q50,40 5,20" fill="none" stroke="currentColor" strokeWidth="3" />
+                </svg>
+              </span>
+              {" "}and opportunities for <br className="hidden md:block" />Deaf communities in Nigeria
+            </h1>
+            <p className="text-lg md:text-xl text-[#2D1B69]/80 mb-8 max-w-lg leading-relaxed">
+              {heroContent.subtitle}
+            </p>
+            <Link
+              href={heroContent.cta.href}
+              className="inline-flex items-center gap-2 bg-[#2D1B69] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#2D1B69]/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
-              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 ${heroContent.textColor}`}>
-                {heroContent.title}
-              </h1>
-              <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mb-8 leading-relaxed">
-                {heroContent.subtitle}
-              </p>
-              <Link
-                href={heroContent.cta.href}
-                className="inline-flex items-center gap-2 bg-[#2D1B69] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#2D1B69]/90 transition-all font-inter"
-              >
-                {heroContent.cta.label}
-                <ArrowRight size={20} />
-              </Link>
-            </motion.div>
-          </div>
+              {heroContent.cta.label}
+              <ArrowRight size={20} />
+            </Link>
+          </motion.div>
+
+          {/* Right Image Composition */}
+          <motion.div
+            className="relative h-[400px] md:h-[600px] w-full hidden md:block"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {/* Main large image */}
+            <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10 bg-white">
+              <Image
+                src="/dfb786f4-81f3-4bdf-bccf-e651d40a72fa.JPG"
+                alt="DAF Event"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            {/* Secondary smaller image */}
+            <div className="absolute bottom-0 left-0 w-[60%] h-[50%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 bg-white">
+              <Image
+                src="/3d955a16-d796-4dcb-8744-a8ca42b64656.JPG"
+                alt="Community"
+                fill
+                className="object-cover"
+              />
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D9E5C3] rounded-full mix-blend-multiply opacity-70 blur-2xl z-0"></div>
+            <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#C4953A] rounded-full mix-blend-multiply opacity-40 blur-3xl z-0"></div>
+          </motion.div>
         </div>
       </section>
 
