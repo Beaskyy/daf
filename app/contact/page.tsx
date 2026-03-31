@@ -25,8 +25,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-xl mb-2">Email</h4>
-                  <a href="mailto:deafaccessfoundation@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
-                    deafaccessfoundation@gmail.com
+                  <a href="mailto:info@deafaccessfoundation.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                    info@deafaccessfoundation.com
                   </a>
                 </div>
               </div>

@@ -58,7 +58,7 @@ export default function Partner() {
             <p className="text-xl text-background/80 leading-relaxed mb-12">
               We welcome partnerships with organisations interested in improving access and opportunities for Deaf communities in Nigeria. Educators, schools, and community partners are at the heart of what we do.
             </p>
-            <a href="mailto:deafaccessfoundation@gmail.com" className="bg-secondary text-secondary-foreground font-bold px-12 py-5 rounded-full text-lg shadow-xl hover:bg-secondary/90 transition-all inline-block">
+            <a href="mailto:info@deafaccessfoundation.com" className="bg-secondary text-secondary-foreground font-bold px-12 py-5 rounded-full text-lg shadow-xl hover:bg-secondary/90 transition-all inline-block">
               Get in Touch
             </a>
           </div>

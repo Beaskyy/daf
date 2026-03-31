@@ -58,8 +58,8 @@ export default function Footer() {
             <ul className="space-y-4 text-white/60">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#C4953A]" />
-                <a href="mailto:deafaccessfoundation@gmail.com" className="hover:text-[#C4953A] transition-colors break-all">
-                  deafaccessfoundation@gmail.com
+                <a href="mailto:info@deafaccessfoundation.com" className="hover:text-[#C4953A] transition-colors break-all">
+                  info@deafaccessfoundation.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

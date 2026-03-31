@@ -77,7 +77,7 @@ export default function Resources() {
           <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto">
             Our goal is to support everyone interested in improving communication access. Contact our team for bespoke resource support.
           </p>
-          <a href="mailto:deafaccessfoundation@gmail.com" className="bg-[#C4953A] text-white font-bold px-10 py-4 rounded-lg text-lg hover:bg-[#C4953A]/90 transition-all inline-block">
+          <a href="mailto:info@deafaccessfoundation.com" className="bg-[#C4953A] text-white font-bold px-10 py-4 rounded-lg text-lg hover:bg-[#C4953A]/90 transition-all inline-block">
             Request Resources
           </a>
         </div>
