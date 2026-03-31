@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, GraduationCap, Megaphone, Users, Accessibility, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, GraduationCap, Megaphone, Users, Hand, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 
 /* ── Initiative Cards ────────────────────────────────────────── */
@@ -32,7 +32,7 @@ const initiatives = [
   {
     title: "Accessibility Initiatives",
     desc: "Supporting projects like SignFlow, a web‑based communication tool, to improve practical communication access for the Deaf community.",
-    icon: <Accessibility size={28} />,
+    icon: <Hand size={28} />,
     color: "bg-[#8B5CF6]",
     href: "/resources",
   },

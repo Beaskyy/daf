@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function Team() {
+  const [activeMember, setActiveMember] = useState<number | null>(null);
   const team = [
     {
       name: "Oyindamola Bello Adigun",
@@ -45,24 +47,61 @@ export default function Team() {
       {/* Team Grid — White */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {team.map((member, i) => (
               <motion.div 
                 key={i} 
-                className="group"
+                className="flex flex-col items-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div className="relative h-[500px] w-full rounded-2xl overflow-hidden mb-6 shadow-xl">
-                  <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2D1B69]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                    <p className="text-white text-sm leading-relaxed">{member.bio}</p>
+                <div className="relative mb-8 w-full max-w-[280px]">
+                  {/* Decorative "Canva" Frame Background */}
+                  <div className="absolute inset-0 bg-[#F5E6C8] rounded-full scale-105 -z-10 shadow-inner"></div>
+                  
+                  {/* Circular Image Container */}
+                  <div 
+                    className="relative aspect-square w-full rounded-full overflow-hidden shadow-2xl border-4 border-white cursor-pointer group"
+                    onClick={() => setActiveMember(activeMember === i ? null : i)}
+                  >
+                    <Image 
+                      src={member.image} 
+                      alt={member.name} 
+                      fill 
+                      className={`object-cover transition-transform duration-700 ${activeMember === i ? 'scale-110 blur-[2px]' : 'group-hover:scale-105'}`} 
+                    />
+                    
+                    {/* Bio Overlay (Click to reveal) */}
+                    <AnimatePresence>
+                      {activeMember === i && (
+                        <motion.div 
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.9 }}
+                          className="absolute inset-0 bg-[#2D1B69]/90 flex items-center justify-center p-8 text-center backdrop-blur-sm"
+                        >
+                          <div className="flex flex-col items-center gap-3">
+                            <p className="text-white text-sm leading-relaxed font-medium">{member.bio}</p>
+                            <span className="text-[#C4953A] text-xs font-bold tracking-widest uppercase mt-2">Close</span>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Hint for interaction */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                      <span className="text-white text-[10px] font-bold uppercase tracking-tighter">Click for Bio</span>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-black mb-1 text-[#2D1B69]">{member.name}</h3>
-                <p className="text-[#C4953A] font-bold text-sm tracking-wide uppercase">{member.role}</p>
+
+                <div className="text-center">
+                  <h3 className="text-2xl font-black mb-2 text-[#2D1B69]">{member.name}</h3>
+                  <div className="w-12 h-1 bg-[#C4953A] mx-auto mb-3 rounded-full"></div>
+                  <p className="text-[#C4953A] font-bold text-sm tracking-wide uppercase px-4">{member.role}</p>
+                </div>
               </motion.div>
             ))}
           </div>
