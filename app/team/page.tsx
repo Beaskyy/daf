@@ -16,13 +16,19 @@ export default function Team() {
       name: "Grace O.",
       role: "Director of Programmes",
       bio: "Grace leads the planning and coordination of DAF's outreach activities, ensuring they are organised, responsive, and impactful.",
-      image: "/3d955a16-d796-4dcb-8744-a8ca42b64656.JPG"
+      image: "/grace.png"
     },
     {
       name: "Taofeekat Adigun",
       role: "Head of Strategy & Partnerships",
       bio: "Taofeekat supports the strategic direction and partnerships of DAF, building relationships with schools and organisations to expand opportunities.",
-      image: "/logo.png"
+      image: "/taoffy.png"
+    },
+    {
+      name: "Shukurat Salam",
+      role: "Programs Coordinator",
+      bio: "Sukurat supports the programs and coordination of Deaf Access Foundation. She works closely with the programmes directorates on successful execution of school programs, vocational training and scholarship funds for Deaf individuals.",
+      image: "/shukrat.png"
     }
   ];
 
@@ -49,7 +55,7 @@ export default function Team() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-6 shadow-xl">
+                <div className="relative h-[500px] w-full rounded-2xl overflow-hidden mb-6 shadow-xl">
                   <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2D1B69]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                     <p className="text-white text-sm leading-relaxed">{member.bio}</p>
