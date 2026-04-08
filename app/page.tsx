@@ -74,9 +74,9 @@ export default function Home() {
               Advancing{" "}
               <span className="relative inline-block mt-2">
                 <span className="relative z-10">access</span>
-                <svg className="absolute -bottom-2 -left-2 w-[120%] h-[120%] -z-10 text-[#C4953A]" viewBox="0 0 100 40" preserveAspectRatio="none">
+                {/* <svg className="absolute -bottom-2 -left-2 w-[120%] h-[120%] -z-10 text-[#C4953A]" viewBox="0 0 100 40" preserveAspectRatio="none">
                   <path d="M5,20 Q50,0 95,20 Q50,40 5,20" fill="none" stroke="currentColor" strokeWidth="3" />
-                </svg>
+                </svg> */}
               </span>
               {" "}and opportunities for <br className="hidden md:block" />Deaf communities in Nigeria
             </h1>
