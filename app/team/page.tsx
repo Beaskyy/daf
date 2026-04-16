@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function Team() {
-  const [activeMember, setActiveMember] = useState<number | null>(null);
   const team = [
     {
       name: "Oyindamola Bello Adigun",
@@ -51,7 +50,7 @@ export default function Team() {
             {team.map((member, i) => (
               <motion.div 
                 key={i} 
-                className="flex flex-col items-center"
+                className="flex flex-col items-center group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -63,44 +62,29 @@ export default function Team() {
                   
                   {/* Circular Image Container */}
                   <div 
-                    className="relative aspect-square w-full rounded-full overflow-hidden shadow-2xl border-4 border-white cursor-pointer group"
-                    onClick={() => setActiveMember(activeMember === i ? null : i)}
+                    className="relative aspect-square w-full rounded-full overflow-hidden shadow-2xl border-4 border-white"
                   >
                     <Image 
                       src={member.image} 
                       alt={member.name} 
                       fill 
-                      className={`object-cover transition-transform duration-700 ${activeMember === i ? 'scale-110 blur-[2px]' : 'group-hover:scale-105'}`} 
+                      className="object-cover transition-transform duration-700 group-hover:scale-110" 
                     />
-                    
-                    {/* Bio Overlay (Click to reveal) */}
-                    <AnimatePresence>
-                      {activeMember === i && (
-                        <motion.div 
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
-                          className="absolute inset-0 bg-[#2D1B69]/90 flex items-center justify-center p-8 text-center backdrop-blur-sm"
-                        >
-                          <div className="flex flex-col items-center gap-3">
-                            <p className="text-white text-sm leading-relaxed font-medium">{member.bio}</p>
-                            <span className="text-[#C4953A] text-xs font-bold tracking-widest uppercase mt-2">Close</span>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    {/* Hint for interaction */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                      <span className="text-white text-[10px] font-bold uppercase tracking-tighter">Click for Bio</span>
-                    </div>
                   </div>
                 </div>
 
-                <div className="text-center">
+                <div className="text-center flex flex-col items-center">
                   <h3 className="text-2xl font-black mb-2 text-[#2D1B69]">{member.name}</h3>
-                  <div className="w-12 h-1 bg-[#C4953A] mx-auto mb-3 rounded-full"></div>
-                  <p className="text-[#C4953A] font-bold text-sm tracking-wide uppercase px-4">{member.role}</p>
+                  <div className="w-12 h-1 bg-[#C4953A] mb-3 rounded-full"></div>
+                  <p className="text-[#C4953A] font-bold text-sm tracking-wide uppercase px-4 mb-4">
+                    {member.role}
+                  </p>
+
+                  <div className="max-w-[280px]">
+                    <p className="text-sm text-foreground/60 leading-relaxed text-center">
+                      {member.bio}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -114,7 +98,7 @@ export default function Team() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-black mb-6 text-[#2D1B69]">Volunteers & Collaborators</h2>
-              <p className="text-lg text-foreground/70 leading-relaxed text-justify">
+              <p className="text-lg text-foreground/70 leading-relaxed text-center">
                 The Foundation works with volunteers, educators, and community members who support its outreach activities, programmes, and events. Our work is a collective effort to build a more inclusive society.
               </p>
             </div>
