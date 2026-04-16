@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, GraduationCap, Megaphone, Users, Hand, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
+import Newsletter from "@/components/Newsletter";
 
 /* ── Initiative Cards ────────────────────────────────────────── */
 const initiatives = [
@@ -347,6 +348,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Newsletter />
     </>
   );
 }
