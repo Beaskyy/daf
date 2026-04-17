@@ -72,6 +72,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://deafaccessfoundation.com",
   },
+  verification: {
+    google: "googlea0b5f83a82a5886b",
+  },
 };
 
 export default function RootLayout({
